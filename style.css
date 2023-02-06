@@ -1,0 +1,270 @@
+:root {
+	--font-1: "Inter", sans-serif;
+	--font-2: "Karla", sans-serif;
+	--font-3: "Poppins", sans-serif;
+
+	/* Dark Mode */
+	--col-1: #1c1c1c; /* inter bg */
+	--col-2: #1f2937; /* con bg */
+	--col-3: #273549; /* pass bg */
+	--col-4: #4adf86; /* text col */
+	--col-5: #10b981; /* btn bg */
+	--col-6: #d5d4d8; /* sub text col */
+
+	/* Light Mode */
+	--light-1: #ECFDF5; /* con bg */
+	--light-2: #2B283A; /* title col */
+	--light-3: #6B7280; /* sub text col */
+
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.interface {
+	width: 100%;
+	height: 100vh;
+	background: var(--col-1);
+}
+
+.container {
+	position: relative;
+	background: var(--col-2);
+	height: 550px;
+	width: 550px;
+	padding: 0 52px;
+	flex-direction: column;
+	align-items: start;
+}
+
+.toggle {
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	color: #fff;
+}
+
+#toggle-light {
+	font-size: 1.8rem;
+	cursor: pointer;
+	transition: 1s;
+}
+
+.title {
+	color: #fff;
+	font-family: var(--font-2);
+	font-weight: 800;
+	font-size: 37px;
+}
+
+.title span {
+	color: var(--col-4);
+}
+
+.sub-title {
+	color: var(--col-6);
+	font-family: var(--font-1);
+	font-size: 17px;
+	font-weight: 400;
+	margin-top: 10px;
+}
+
+#generate {
+	margin-top: 90px;
+	color: #fff;
+	text-shadow: 0.8px 0.8px 0 var(--col-1);
+	background: var(--col-5);
+	padding: 9px 17px;
+	border-radius: 6px;
+	font-family: var(--font-1);
+	font-weight: 600;
+	font-size: 15px;
+	border: none;
+	cursor: pointer;
+}
+
+.line {
+	width: 100%;
+	height: 1px;
+	background: var(--col-3);
+	margin-block: 35px;
+}
+
+.flex-con {
+	justify-content: space-between;
+	width: 100%;
+	position: relative;
+}
+
+/* form {
+	position: relative;
+} */
+
+#password-one,
+#password-two {
+	text-align: center;
+	color: var(--col-4);
+	width: 211px;
+	height: 40px;
+	border-radius: 6px;
+	background: var(--col-3);
+	font-size: 15px;
+	font-family: var(--font-1);
+	outline: none;
+	border: none;
+}
+
+/* #copy-pass-one,
+#copy-pass-two {
+	position: absolute;
+	transform: translateY(-50%);
+	background: transparent;
+	border: none;
+	cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    justify-content: end;
+    transition: 0.5s;
+    background: transparent;
+} */
+
+#copy-pass-one,
+#copy-pass-two {
+	position: absolute;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	width: 211px;
+	height: 40px;
+	top: 0;
+	justify-content: end;
+	transition: 0.5s;
+	background: transparent;
+}
+
+#copy-pass-two {
+	right: 0;
+}
+
+#copy-pass-one i,
+#copy-pass-two i {
+	font-size: 1.5rem;
+	font-weight: 200;
+	color: var(--col-6);
+	margin-right: 8px;
+	transition: 0.5s;
+	opacity: 0;
+}
+
+#copy-pass-one span,
+#copy-pass-two span {
+	position: absolute;
+	top: 110%;
+	left: -50%;
+	transform: translateX(70%);
+	color: var(--col-6);
+	transition: 0.5s;
+	opacity: 0;
+	text-transform: capitalize;
+}
+
+#copy-pass-one:hover i,
+#copy-pass-two:hover i {
+	opacity: 0.5;
+}
+
+#copy-pass-one:hover span,
+#copy-pass-two:hover span {
+	opacity: 0.5;
+}
+
+@media (max-width: 530px) {
+	.container {
+		width: 85%;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		height: auto;
+		padding: 42px 10px;
+	}
+
+	.title {
+		font-size: 37px;
+	}
+
+	.title span {
+		font-size: 30px;
+		text-transform: capitalize;
+	}
+
+	.sub-title {
+		font-size: 16px;
+		font-weight: 400;
+		margin-top: 13px;
+	}
+
+	#generate {
+		margin-top: 90px;
+	}
+
+	.line {
+		width: 90%;
+		height: 2px;
+		margin-block: 30px;
+	}
+
+	.flex-con {
+		flex-direction: column;
+		height: 104px;
+	}
+
+	#password-one,
+	#password-two {
+		width: 185px;
+		height: 36px;
+		text-align: left;
+		padding-left: 10px;
+	}
+
+	#copy-pass-two {
+		bottom: 0;
+		top: unset;
+		right: unset;
+	}
+
+	#copy-pass-one i {
+		font-size: 1.25rem;
+		margin-right: 20px;
+		margin-bottom: 3px;
+		opacity: 0.5;
+	}
+
+	#copy-pass-two i {
+		font-size: 1.25rem;
+		margin-right: 20px;
+		margin-top: 4px;
+		opacity: 0.5;
+	}
+
+	#copy-pass-one span {
+		top: 98%;
+		opacity: 0.5;
+	}
+
+	#copy-pass-two span {
+		top: 108%;
+		opacity: 0.5;
+	}
+}

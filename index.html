@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Password Generator</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800;900&family=Karla:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="interface flex">
+			<div class="container flex">
+				<div class="toggle">
+					<i id="toggle-light" class="fa-solid fa-sun"></i>
+					<!-- <i class="fa-solid fa-moon"></i> -->
+				</div>
+				<h1 class="title">
+					Generate a <br /><span>random password</span>
+				</h1>
+				<p class="sub-title">Never use an insecure password again.</p>
+
+				<button id="generate">Generate passwords</button>
+
+				<div class="line"></div>
+
+				<div class="flex-con flex">
+					<!-- <form action="">
+                        <input type="text" class="flex" id="password-one">
+                        <button class="flex" id="copy-pass-one">
+                            <i class="fa-regular fa-copy"></i>
+                            <span>Copy 10 character password</span>
+                        </button>
+                    </form> -->
+
+					<input type="text" class="flex" id="password-one" />
+					<button class="flex" id="copy-pass-one">
+						<i class="fa-regular fa-copy"></i>
+						<span class="dark-mode">Copy 10 character password</span>
+					</button>
+
+					<!-- <form action="">
+						<input type="text" class="flex" id="password-two" />
+						<button class="flex" id="copy-pass-two">
+							<i class="fa-regular fa-copy"></i>
+							<span>Copy 15 character password</span>
+						</button>
+					</form> -->
+
+					<input type="text" class="flex" id="password-two" />
+					<button class="flex" id="copy-pass-two">
+						<i class="fa-regular fa-copy"></i>
+						<span class="dark-mode-2">Copy 15 character password</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+		<script
+			src="https://kit.fontawesome.com/53af5e9bb6.js"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
